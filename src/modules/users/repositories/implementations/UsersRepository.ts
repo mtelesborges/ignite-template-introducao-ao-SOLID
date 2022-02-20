@@ -42,6 +42,7 @@ class UsersRepository implements IUsersRepository {
     this.users.map(user => {
       if(user.id === receivedUser.id){
         user.admin = true;
+        user.updated_at = new Date;
       }
       return user;
     })
